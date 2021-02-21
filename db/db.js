@@ -4,8 +4,7 @@ const sqlite3 = require('sqlite3').verbose();
 var ErrNoRecord = new Error("User does not exist")
 var ErrNoJob = new Error("User does not have a job")
 
-
-class busPatrolDB {
+class BusPatrolDB {
 
     constructor(dbFilePath) {
         this.dbFile = dbFilePath
@@ -101,3 +100,5 @@ const validateString = (paramToValidate) => {
     return null
 }
 
+
+module.exports = { ErrNoJob, ErrNoRecord, BusPatrolDB }
