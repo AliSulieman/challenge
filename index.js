@@ -1,10 +1,12 @@
+const { Console } = require('console');
 const http = require('http')
 const serv = require('./route/service.js')
 http.createServer(function (req, res) {
-    const url = req.url
-    if (url === '/user') {
+    if (url === '/user/:username') {
+
         serv.user(req, res)
     } else {
+        console.log(url)
         res.write('hello BusPatrol')
         res.end()
     }
