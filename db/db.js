@@ -44,7 +44,6 @@ class BusPatrolDB {
     }
 
     getUserJobByUserName(username, resultCallBack) {
-
         const err = validateString(username)
         if (err !== null) {
             resultCallBack(null, username, newErr)
@@ -87,7 +86,6 @@ class BusPatrolDB {
 
     }
 }
-
 
 const validateString = (paramToValidate) => {
 
